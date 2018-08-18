@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- For Database Connection -->
+	
+  	 <bean id="mydbconnection" class="com.springirafinanceapp.dao.DbConnection">
+  		<constructor-arg value="jdbc:mysql://localhost:3306/irafinance?characterEncoding=UTF-8"/>
+  		<constructor-arg value="root"></constructor-arg>
+ 	 	<constructor-arg value="ashish"></constructor-arg>
+  	</bean> 
+
+	
+	<!-- For Item Excel Upload Path -->
+	<bean id="myPath" class="com.springirafinanceapp.config.PathConfig">
+	<property name="excelPath" value="H:\\tomcat 8.0\\webapps\\FinsuiteAdmin\\excel"></property>
+	
+	<!-- For inventory Excel Upload Path -->
+	<property name="inventoryPath" value="H:\\tomcat 8.0\\webapps\\FinsuiteAdmin\\upload inventory excel"></property>
+	
+	</bean>
+	
+
+</beans>
+
+
+
+
+
